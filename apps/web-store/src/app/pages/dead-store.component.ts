@@ -1,11 +1,12 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { DeadService } from '@dead/xplat/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'dead-store',
   standalone: true,
-  imports: [CommonModule, NgOptimizedImage],
+  imports: [CommonModule, RouterModule, NgOptimizedImage],
   host: {
     class: 'grid grid-cols-4 gap-2 p-4 bg-[#f7f5ee]',
   },
@@ -53,10 +54,11 @@ import { DeadService } from '@dead/xplat/core';
       </div>
     </div>
 
-    <div *ngFor="let image of deadService.images">
+    <div *ngFor="let image of deadService.images; let i = index">
       <img
         [alt]="image"
         [ngSrc]="image"
+        [routerLink]="['/detail', i]"
         width="300"
         height="300"
         class="rounded-lg hover:scale-95 ease-in-out duration-300"

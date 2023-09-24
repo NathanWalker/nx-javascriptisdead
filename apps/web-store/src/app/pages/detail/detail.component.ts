@@ -15,7 +15,9 @@ import { map, take } from 'rxjs';
       <img
         [alt]="image | async"
         [ngSrc]="image | async"
-        class="rounded-lg w-full h-full"
+        class="w-full h-full object-contain bg-black"
+        fill
+        priority
       />
   `,
 })
