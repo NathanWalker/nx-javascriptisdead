@@ -1,8 +1,6 @@
 import { Component, inject } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 import { RouterExtensions } from '@nativescript/angular';
-import { map, take } from 'rxjs';
-import { DeadService } from '@dead/xplat/core';
+import { fetchDetailRouteImage } from '@dead/xplat/core';
 import { CoreTypes, Page, SharedTransition, View } from '@nativescript/core';
 
 @Component({
@@ -32,13 +30,9 @@ import { CoreTypes, Page, SharedTransition, View } from '@nativescript/core';
   </GridLayout> `,
 })
 export class DetailComponent {
+  image = fetchDetailRouteImage();
   router = inject(RouterExtensions);
   page = inject(Page);
-  deadService = inject(DeadService);
-  image = inject(ActivatedRoute).params.pipe(
-    take(1),
-    map((p) => this.deadService.images[+p['id']])
-  );
   cachedImage: View;
   zoomImage: View;
 

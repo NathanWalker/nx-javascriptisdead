@@ -62,6 +62,7 @@ import { RouterModule } from '@angular/router';
         width="300"
         height="300"
         class="rounded-lg hover:scale-95 ease-in-out duration-300"
+        [priority]="i < 5"
       />
     </div>
   `,
