@@ -1,0 +1,54 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": [
+      "es2020",
+      "dom"
+    ],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@dead/xplat/core": [
+        "libs/xplat/core/src/index.ts"
+      ],
+      "@dead/xplat/environments": [
+        "libs/xplat/core/src/lib/environments/base/index.ts"
+      ],
+      "@dead/xplat/features": [
+        "libs/xplat/features/src/index.ts"
+      ],
+      "@dead/xplat/nativescript/core": [
+        "libs/xplat/nativescript/core/src/index.ts"
+      ],
+      "@dead/xplat/nativescript/features": [
+        "libs/xplat/nativescript/features/src/index.ts"
+      ],
+      "@dead/xplat/nativescript/utils": [
+        "libs/xplat/nativescript/utils/src/index.ts"
+      ],
+      "@dead/xplat/utils": [
+        "libs/xplat/utils/src/index.ts"
+      ],
+      "@dead/xplat/web/core": [
+        "libs/xplat/web/core/src/index.ts"
+      ],
+      "@dead/xplat/web/features": [
+        "libs/xplat/web/features/src/index.ts"
+      ]
+    }
+  },
+  "exclude": [
+    "node_modules",
+    "tmp"
+  ]
+}

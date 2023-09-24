@@ -1,0 +1,67 @@
+{
+  "name": "web-store",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/web-store/src",
+  "targets": {
+    "build": {
+      "executor": "@nx/vite:build",
+      "outputs": [
+        "{options.outputPath}",
+        "{workspaceRoot}/dist/apps/web-store/.nitro",
+        "{workspaceRoot}/dist/apps/web-store/ssr",
+        "{workspaceRoot}/dist/apps/web-store/analog"
+      ],
+      "options": {
+        "main": "apps/web-store/src/main.ts",
+        "configFile": "apps/web-store/vite.config.ts",
+        "outputPath": "dist/apps/web-store/client"
+      },
+      "defaultConfiguration": "production",
+      "configurations": {
+        "development": {
+          "mode": "development"
+        },
+        "production": {
+          "sourcemap": false,
+          "mode": "production"
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nx/vite:dev-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "web-store:build",
+        "port": 4200
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "web-store:build:development",
+          "hmr": true
+        },
+        "production": {
+          "buildTarget": "web-store:build:production"
+        }
+      }
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "web-store:build"
+      }
+    },
+    "test": {
+      "executor": "@nx/vite:test",
+      "outputs": ["{projectRoot}/coverage"]
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/web-store/**/*.{ts,html}"]
+      }
+    }
+  },
+  "tags": []
+}

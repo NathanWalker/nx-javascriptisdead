@@ -1,0 +1,17 @@
+{
+  "name": "store",
+  "main": "./src/main.ts",
+  "license": "SEE LICENSE IN <your-license-filename>",
+  "version": "0.0.0",
+  "dependencies": {
+    "@nativescript/core": "*",
+    "@nativescript/tailwind": "*",
+    "@nativescript-community/ui-collectionview": "*",
+    "@triniwiz/nativescript-image-cache-it": "*",
+    "@triniwiz/nativescript-image-zoom": "*"
+  },
+  "devDependencies": {
+    "@nativescript/android": "~8.5.0",
+    "@nativescript/ios": "~8.5.0"
+  }
+}
