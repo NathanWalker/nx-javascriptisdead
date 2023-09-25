@@ -1,6 +1,9 @@
 # Nx proves JavaScript is Dead 💀
 
-https://nx-javascriptisdead.com/
+An inspired Web, iOS + Android code sharing example for learning. 
+
+This is an Nx workspace delivering optimal UX across Web, iOS and Android via [Analog](https://analogjs.org) and [NativeScript](https://nativescript.org).
+Web deploy is here: https://nx-javascriptisdead.com
 
 https://github.com/NathanWalker/nx-javascriptisdead/assets/457187/3236652c-8416-491e-913a-fe8eaf473027
 
