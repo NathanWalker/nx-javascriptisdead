@@ -3,7 +3,6 @@
 An inspired Web, iOS + Android code sharing example for learning. 
 
 This is an Nx workspace delivering optimal UX across Web, iOS and Android via [Analog](https://analogjs.org) and [NativeScript](https://nativescript.org).
-Web deploy is here: https://nx-javascriptisdead.com
 
 https://github.com/NathanWalker/nx-javascriptisdead/assets/457187/3236652c-8416-491e-913a-fe8eaf473027
 
@@ -47,7 +46,7 @@ The web app can be hosted with any hosting provider and the iOS and Android apps
 yarn nx run web-store:build
 ```
 
-The app could now be deployed to any web hosting providers. It's currently deployed on [Render](https://render.com/) here: https://nx-javascriptisdead.com/
+The app could now be deployed to any web hosting providers. 
 
 
 #### Build iOS:
